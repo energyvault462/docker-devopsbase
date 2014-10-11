@@ -5,13 +5,13 @@ MAINTAINER dan9186
 # Add EPEL repo
 ADD ext/epel-release-6-8.noarch.rpm /tmp/epel-release-6-8.noarch.rpm
 RUN cd /tmp \
-    && rpm -Uvh epel-release-6-8.noarch.rpm
+    && rpm -Uvh epel-release-6-8.noarch.rpm \
     && rm epel-release-6-8.noarch.rpm
 
 # Install tools available via yum
 RUN yum update -y \
     && yum -y install vim wget unzip \
-    && yum -y clean all
+    && yum clean all
 
 # Install Packer
 RUN cd /tmp \
@@ -40,5 +40,5 @@ RUN cd /tmp \
     && wget https://github.com/coreos/fleet/releases/download/v0.8.3/fleet-v0.8.3-linux-amd64.tar.gz -O fleet.tar.gz \
     && tar xvf fleet.tar.gz \
     && rm fleet.tar.gz \
-    && mv fleet*/fleetctl /usl/local/bin/
+    && mv fleet*/fleetctl /usr/local/bin/
     && rm -rf fleet*
