@@ -42,3 +42,7 @@ RUN cd /tmp \
     && rm fleet.tar.gz \
     && mv fleet*/fleetctl /usr/local/bin/
     && rm -rf fleet*
+
+# Install kubecfg
+# TODO: Build from source
+ADD ext/kubecfg /usr/local/bin/ 
