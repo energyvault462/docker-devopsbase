@@ -1,6 +1,9 @@
 FROM dan9186/golang
 
-RUN yum update -y && yum -y install vim
+# Install tools
+RUN yum update -y \
+    && yum -y install vim wget unzip \
+    && yum -y clean all
 
 # TODO: Add packer install
 # TODO: Add terraform install
