@@ -10,7 +10,7 @@ RUN cd /tmp \
 
 # Install tools available via yum
 RUN yum update -y \
-    && yum -y install vim wget unzip \
+    && yum -y install dig make unzip vim wget \
     && yum clean all
 
 # Install Packer
