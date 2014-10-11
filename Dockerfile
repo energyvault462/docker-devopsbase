@@ -1,5 +1,7 @@
 FROM dan9186/golang
 
+MAINTAINER dan9186
+
 # Install tools
 RUN yum update -y \
     && yum -y install vim wget unzip \
