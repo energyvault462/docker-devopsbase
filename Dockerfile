@@ -19,7 +19,13 @@ RUN cd /tmp \
     && unzip packer.zip \
     && mv packer* /usr/local/bin/
 
-# TODO: Add terraform install
+# Install Terraform
+RUN cd /tmp \
+    && wget https://dl.bintray.com/mitchellh/terraform/terraform_0.2.2_linux_amd64.zip -O terraform.zip \
+    && unzip terraform.zip \
+    && rm terraform.zip \
+    && mv terraform* /usr/local/bin/
+
 # TODO: Add ansible install
 # TODO: Add etcdctl install
 # TODO: Add fleetctl install
