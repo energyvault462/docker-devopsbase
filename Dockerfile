@@ -28,5 +28,12 @@ RUN cd /tmp \
     && mv terraform* /usr/local/bin/
 
 # TODO: Add ansible install
-# TODO: Add etcdctl install
+# Install etcdctl
+RUN cd /tmp \
+    && wget https://github.com/coreos/etcd/releases/download/v0.4.5/etcd-v0.4.5-linux-amd64.tar.gz -O etcdctl.tar.gz \
+    && tar xvf etcdctl.tar.gz \
+    && rm etcdctl.tar.gz \
+    && mv etcd*/etcdctl /usr/local/bin/
+    && rm -rf etcd*
+
 # TODO: Add fleetctl install
