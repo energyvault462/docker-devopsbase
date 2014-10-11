@@ -27,7 +27,6 @@ RUN cd /tmp \
     && rm terraform.zip \
     && mv terraform* /usr/local/bin/
 
-# TODO: Add ansible install
 # Install etcdctl
 RUN cd /tmp \
     && wget https://github.com/coreos/etcd/releases/download/v0.4.5/etcd-v0.4.5-linux-amd64.tar.gz -O etcdctl.tar.gz \
@@ -36,4 +35,10 @@ RUN cd /tmp \
     && mv etcd*/etcdctl /usr/local/bin/
     && rm -rf etcd*
 
-# TODO: Add fleetctl install
+# Install fleetctl
+RUN cd /tmp \
+    && wget https://github.com/coreos/fleet/releases/download/v0.8.3/fleet-v0.8.3-linux-amd64.tar.gz -O fleet.tar.gz \
+    && tar xvf fleet.tar.gz \
+    && rm fleet.tar.gz \
+    && mv fleet*/fleetctl /usl/local/bin/
+    && rm -rf fleet*
