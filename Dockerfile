@@ -2,7 +2,13 @@ FROM dan9186/golang
 
 MAINTAINER dan9186
 
-# Install tools
+# Add EPEL repo
+RUN cd /tmp \
+    && wget http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm \
+    && rpm -Uvh epel-release-6*.rpm
+    && rm epel-release-6*.rpm
+
+# Install tools available via yum
 RUN yum update -y \
     && yum -y install vim wget unzip \
     && yum -y clean all
