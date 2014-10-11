@@ -3,8 +3,8 @@ FROM dan9186/golang
 MAINTAINER dan9186
 
 # Add EPEL repo
+ADD ext/epel-release-6-8.noarch.rpm /tmp/epel-release-6-8.noarch.rpm
 RUN cd /tmp \
-    && wget http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm \
     && rpm -Uvh epel-release-6-8.noarch.rpm
     && rm epel-release-6-8.noarch.rpm
 
