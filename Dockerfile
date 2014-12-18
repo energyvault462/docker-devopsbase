@@ -30,12 +30,11 @@ RUN wget https://github.com/coreos/etcd/releases/download/v0.4.5/etcd-v0.4.5-lin
     rm -rf etcd*
 
 # Install fleetctl
-RUN cd /tmp \
-    && wget https://github.com/coreos/fleet/releases/download/v0.8.3/fleet-v0.8.3-linux-amd64.tar.gz -O fleet.tar.gz \
-    && tar xvf fleet.tar.gz \
-    && rm fleet.tar.gz \
-    && mv fleet*/fleetctl /usr/local/bin/
-    && rm -rf fleet*
+RUN wget https://github.com/coreos/fleet/releases/download/v0.9.0/fleet-v0.9.0-linux-amd64.tar.gz -O fleet.tar.gz && \
+    tar xvf fleet.tar.gz && \
+    rm fleet.tar.gz && \
+    mv fleet*/fleetctl /usr/local/bin/ && \
+    rm -rf fleet*
 
 # Install kubecfg
 # TODO: Build from source
