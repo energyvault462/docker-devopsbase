@@ -2,16 +2,11 @@ FROM dan9186/golang
 
 MAINTAINER Daniel Hess <dan9186@gmail.com>
 
-# Add EPEL repo
-ADD ext/epel-release-6-8.noarch.rpm /tmp/epel-release-6-8.noarch.rpm
-RUN cd /tmp \
-    && rpm -Uvh epel-release-6-8.noarch.rpm \
-    && rm epel-release-6-8.noarch.rpm
-
-# Install tools available via yum
-RUN yum update -y \
-    && yum -y install ack bind-utils make unzip vim wget \
-    && yum clean all
+RUN yum -y install epel-release && \
+    yum -y update && \
+    yum -y upgrade && \
+    yum install -y ack bind-utils bzr curl git make mercurial nodejs tar unzip vim wget && \
+    yum clean all
 
 # Install Packer
 RUN cd /tmp \
