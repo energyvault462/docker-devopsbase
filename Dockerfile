@@ -38,6 +38,6 @@ RUN wget https://github.com/coreos/fleet/releases/download/v0.9.0/fleet-v0.9.0-l
 
 # Install kubecfg
 # TODO: Build from source
-ADD ext/kubecfg /usr/local/bin/ 
+ADD ext/kubecfg /usr/local/bin/
 
 WORKDIR /
