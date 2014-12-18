@@ -1,6 +1,6 @@
 FROM dan9186/golang
 
-MAINTAINER dan9186
+MAINTAINER Daniel Hess <dan9186@gmail.com>
 
 # Add EPEL repo
 ADD ext/epel-release-6-8.noarch.rpm /tmp/epel-release-6-8.noarch.rpm
