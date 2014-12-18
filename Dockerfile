@@ -8,23 +8,22 @@ RUN yum -y install epel-release && \
     yum install -y ack bind-utils bzr curl git make mercurial nodejs tar unzip vim wget && \
     yum clean all
 
+WORKDIR /tmp
+
 # Install Packer
-RUN cd /tmp && \
-    wget https://dl.bintray.com/mitchellh/packer/packer_0.7.5_linux_amd64.zip -O packer.zip && \
+RUN wget https://dl.bintray.com/mitchellh/packer/packer_0.7.5_linux_amd64.zip -O packer.zip && \
     unzip packer.zip && \
     rm packer.zip && \
     mv packer* /usr/local/bin/
 
 # Install Terraform
-RUN cd /tmp && \
-    wget https://dl.bintray.com/mitchellh/terraform/terraform_0.3.5_linux_amd64.zip -O terraform.zip && \
+RUN wget https://dl.bintray.com/mitchellh/terraform/terraform_0.3.5_linux_amd64.zip -O terraform.zip && \
     unzip terraform.zip && \
     rm terraform.zip && \
     mv terraform* /usr/local/bin/
 
 # Install etcdctl
-RUN cd /tmp && \
-    wget https://github.com/coreos/etcd/releases/download/v0.4.5/etcd-v0.4.5-linux-amd64.tar.gz -O etcdctl.tar.gz && \
+RUN wget https://github.com/coreos/etcd/releases/download/v0.4.5/etcd-v0.4.5-linux-amd64.tar.gz -O etcdctl.tar.gz && \
     tar xvf etcdctl.tar.gz && \
     rm etcdctl.tar.gz && \
     mv etcd*/etcdctl /usr/local/bin/ && \
@@ -41,3 +40,5 @@ RUN cd /tmp \
 # Install kubecfg
 # TODO: Build from source
 ADD ext/kubecfg /usr/local/bin/ 
+
+WORKDIR /
