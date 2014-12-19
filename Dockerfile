@@ -5,7 +5,7 @@ MAINTAINER Daniel Hess <dan9186@gmail.com>
 RUN yum -y install epel-release && \
     yum -y update && \
     yum -y upgrade && \
-    yum install -y ack bind-utils bzr curl git make mercurial nodejs tar unzip vim wget && \
+    yum install -y ack bind-utils bzr curl gcc git make mercurial nodejs python-devel python-pip tar unzip vim wget && \
     yum clean all
 
 WORKDIR /tmp
