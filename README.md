@@ -1,4 +1,12 @@
-docker-devopsbase
-=================
+#Devops Base
+A base image directed at providing a base set of tools for a devops style environment
 
-Docker base image for devops
+#Based On
+Built from `centos`
+
+#Tools
+ * ectdctl
+ * fleetctl
+ * kubekfg
+ * packer
+ * terraform
