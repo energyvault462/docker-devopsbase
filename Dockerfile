@@ -41,4 +41,8 @@ RUN wget https://github.com/coreos/fleet/releases/download/v0.9.0/fleet-v0.9.0-l
 # TODO: Build from source
 ADD ext/kubecfg /usr/local/bin/
 
+# Install RVM
+RUN gpg --keyserver hkp://keys.gnupg.net --recv-keys D39DC0E3 && \
+    curl -sSL https://get.rvm.io | bash -s stable --ruby
+
 WORKDIR /
