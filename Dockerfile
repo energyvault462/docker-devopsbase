@@ -31,7 +31,7 @@ RUN wget https://github.com/coreos/etcd/releases/download/v0.4.9/etcd-v0.4.9-lin
     rm -rf etcd*
 
 # Install fleetctl
-RUN wget https://github.com/coreos/fleet/releases/download/v0.10.0/fleet-v0.10.0-linux-amd64.tar.gz -O fleet.tar.gz && \
+RUN wget https://github.com/coreos/fleet/releases/download/v0.10.0/fleet-v0.11.0-linux-amd64.tar.gz -O fleet.tar.gz && \
     tar xvf fleet.tar.gz && \
     rm fleet.tar.gz && \
     mv fleet*/fleetctl /usr/local/bin/ && \
@@ -47,5 +47,17 @@ RUN wget https://github.com/GoogleCloudPlatform/kubernetes/releases/download/v0.
 # Install RVM
 RUN gpg --keyserver hkp://keys.gnupg.net --recv-keys D39DC0E3 && \
     curl -sSL https://get.rvm.io | bash -s stable --ruby
+
+# Install Grunt
+RUN npm install -g grunt-cli
+
+# Install Ember
+RUN npm install -g ember-cli
+
+# Install Bower
+RUN npm install -g bower
+
+# Install Less
+RUN npm install -g less
 
 WORKDIR /
