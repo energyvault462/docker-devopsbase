@@ -8,16 +8,16 @@ Built from `dan9186/golang`
 
 | Packages      | Tools     |
 | ------------- | --------- |
-| ack           | ectdctl   |
-| bind-utils    | fleetctl  |
-| bzr           | kubekft   |
-| cmake         | packer    |
-| curl          | rvm       |
-| gcc           | terraform |
-| git           |           |
-| make          |           |
-| mecurial      |           |
-| nmap          |           |
+| ack           | bower     |
+| bind-utils    | ember-cli |
+| bzr           | ectdctl   |
+| cmake         | fleetctl  |
+| curl          | grunt-cli |
+| gcc           | kubekft   |
+| git           | less      |
+| make          | packer    |
+| mecurial      | rvm       |
+| nmap          | terraform |
 | nmap-ncat     |           |
 | nodejs        |           |
 | python-devel  |           |
