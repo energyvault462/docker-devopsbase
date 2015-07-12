@@ -6,7 +6,7 @@ RUN yum -y install epel-release && \
     yum -y update && \
     yum -y upgrade && \
     yum install -y ack bind-utils bzr cmake curl gcc git make mercurial nmap nmap-ncat \
-       nodejs python-devel python-pip tar unzip vim wget && \
+       nodejs npm python-devel python-pip tar unzip vim wget && \
     yum clean all
 
 WORKDIR /tmp
@@ -31,7 +31,7 @@ RUN wget https://github.com/coreos/etcd/releases/download/v0.4.9/etcd-v0.4.9-lin
     rm -rf etcd*
 
 # Install fleetctl
-RUN wget https://github.com/coreos/fleet/releases/download/v0.10.0/fleet-v0.11.0-linux-amd64.tar.gz -O fleet.tar.gz && \
+RUN wget https://github.com/coreos/fleet/releases/download/v0.11.0/fleet-v0.11.0-linux-amd64.tar.gz -O fleet.tar.gz && \
     tar xvf fleet.tar.gz && \
     rm fleet.tar.gz && \
     mv fleet*/fleetctl /usr/local/bin/ && \
