@@ -13,7 +13,7 @@ RUN yum -y install epel-release && \
 WORKDIR /tmp
 
 # Install Packer
-RUN wget https://dl.bintray.com/mitchellh/packer/packer_0.8.1_linux_amd64.zip -O packer.zip && \
+RUN wget https://dl.bintray.com/mitchellh/packer/packer_0.8.6_linux_amd64.zip -O packer.zip && \
     unzip packer.zip && \
     rm packer.zip && \
     mv packer* /usr/local/bin/
