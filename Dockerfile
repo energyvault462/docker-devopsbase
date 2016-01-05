@@ -1,4 +1,4 @@
-FROM dan9186/golang
+FROM dan9186/golang:centos7
 
 MAINTAINER Daniel Hess <dan9186@gmail.com>
 
