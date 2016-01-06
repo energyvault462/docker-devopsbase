@@ -7,7 +7,7 @@ RUN yum -y install epel-release && \
     yum -y upgrade && \
     yum install -y ack bind-utils bzr cmake curl gcc git make mercurial nmap nmap-ncat \
        nodejs npm python-devel python-pip tar unzip vim wget \
-       libxml2-devel libxslt-devel xmlsec1-openssl-devel libtool-ltdl-devel && \
+       libxml2-devel libxslt-devel xmlsec1-openssl-devel libtool-ltdl-devel net-tools && \
     yum clean all
 
 WORKDIR /tmp
