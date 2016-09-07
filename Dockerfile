@@ -20,7 +20,11 @@ RUN wget https://releases.hashicorp.com/packer/0.10.1/packer_0.10.1_linux_amd64.
 
 # Install RVM
 RUN gpg --keyserver hkp://keys.gnupg.net --recv-keys D39DC0E3 && \
-    curl -sSL https://get.rvm.io | bash -s stable --ruby
+    wget https://github.com/rvm/rvm/archive/1.27.0.tar.gz && \
+    tar xvf 1.27.0.tar.gz && \
+    cd rvm-1.27.0 && \
+    ./install
+
 
 # Install Grunt
 RUN npm install -g grunt-cli
