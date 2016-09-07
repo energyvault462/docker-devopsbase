@@ -5,9 +5,10 @@ MAINTAINER Daniel Hess <dan9186@gmail.com>
 RUN yum -y install epel-release && \
     yum -y update && \
     yum -y upgrade && \
-    yum install -y ack bind-utils bzr cmake curl gcc git make mercurial nmap nmap-ncat \
-       nodejs npm python-devel python-pip tar unzip vim wget \
-       libxml2-devel libxslt-devel xmlsec1-openssl-devel libtool-ltdl-devel net-tools && \
+    yum install -y ack autoconf automake bind-utils bison bzip2 bzr cmake curl git make man mercurial nmap nmap-ncat \
+       nodejs npm patch python-devel python-pip tar unzip vim wget \
+       libffi-devel libtool libxml2-devel libxslt-devel libyaml-devel xmlsec1-openssl-devel libtool-ltdl-devel net-tools \
+       readline-devel sqlite-devel && \
     yum clean all
 
 WORKDIR /tmp
