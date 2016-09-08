@@ -12,7 +12,7 @@ RUN yum -y install epel-release && \
 					jq \
 					libcurl-devel libffi-devel libtool libxml2-devel libxslt-devel libyaml-devel libtool-ltdl-devel \
 					git \
-					make man mercurial \
+					make man maven mercurial \
 					nmap nmap-ncat nodejs npm net-tools \
 					patch python-devel python-pip \
 					readline-devel \
