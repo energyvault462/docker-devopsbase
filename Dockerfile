@@ -5,10 +5,24 @@ MAINTAINER Daniel Hess <dan9186@gmail.com>
 RUN yum -y install epel-release && \
     yum -y update && \
     yum -y upgrade && \
-    yum install -y ack autoconf automake bind-utils bison bzip2 bzr cmake curl git make man mercurial nmap nmap-ncat \
-       nodejs npm patch python-devel python-pip tar unzip vim wget \
-       libffi-devel libtool libxml2-devel libxslt-devel libyaml-devel xmlsec1-openssl-devel libtool-ltdl-devel net-tools \
-       readline-devel sqlite-devel && \
+    yum install -y \
+					ack autoconf automake \
+					bind-utils bison bzip2 bzr \
+					cmake curl \
+					jq \
+					libffi-devel libtool libxml2-devel libxslt-devel libyaml-devel libtool-ltdl-devel \
+					git \
+					make man mercurial \
+					nmap nmap-ncat nodejs npm net-tools \
+					patch python-devel python-pip \
+					readline-devel \
+					sqlite-devel \
+					tar \
+					unzip \
+					vim \
+					wget \
+					xmlsec1-openssl-devel \
+					&& \
     yum clean all
 
 WORKDIR /tmp
