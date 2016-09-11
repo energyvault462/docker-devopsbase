@@ -38,7 +38,9 @@ RUN gpg --keyserver hkp://keys.gnupg.net --recv-keys D39DC0E3 && \
     wget https://github.com/rvm/rvm/archive/1.27.0.tar.gz && \
     tar xvf 1.27.0.tar.gz && \
     cd rvm-1.27.0 && \
-    ./install
+    ./install && \
+    cd /tmp && \
+    rm -rf 1.27.0.tar.gz rvm-1.27.0
 
 
 # Install Grunt
