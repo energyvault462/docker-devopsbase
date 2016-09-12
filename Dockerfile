@@ -55,4 +55,7 @@ RUN npm install -g bower
 # Install Less
 RUN npm install -g less
 
+# Add custom binaries
+ADD ext/cqlsh /usr/bin/cqlsh
+
 WORKDIR /
