@@ -1,0 +1,4 @@
+script:
+   - docker build -t devopsbase .
+services:
+   - docker
