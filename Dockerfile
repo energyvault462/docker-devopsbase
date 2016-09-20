@@ -18,7 +18,7 @@ RUN yum -y install epel-release && \
 					git \
 					make man maven mercurial \
 					nmap nmap-ncat nodejs npm net-tools \
-					patch postgresql95-devel python-devel python-pip \
+					patch postgresql95-devel postgresql-devel python-devel python-pip \
 					readline-devel \
 					sqlite-devel \
 					tar \
