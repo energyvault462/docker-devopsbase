@@ -14,11 +14,11 @@ RUN yum -y install epel-release && \
 					bind-utils bison bzip2 bzr \
 					cmake curl \
 					jq \
-					libcurl-devel libffi-devel libtool libxml2-devel libxslt-devel libyaml-devel libtool-ltdl-devel \
+					libcurl-devel libffi-devel libpqxx-devel libtool libxml2-devel libxslt-devel libyaml-devel libtool-ltdl-devel \
 					git \
 					make man maven mercurial \
 					nmap nmap-ncat nodejs npm net-tools \
-					patch postgresql95-devel python-devel python-pip \
+					patch postgresql95-devel postgresql-devel python-devel python-pip \
 					readline-devel \
 					sqlite-devel \
 					tar \
