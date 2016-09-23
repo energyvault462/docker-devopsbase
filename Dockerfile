@@ -49,6 +49,9 @@ RUN wget https://releases.hashicorp.com/packer/0.10.1/packer_0.10.1_linux_amd64.
     rm packer.zip && \
     mv packer* /usr/local/bin/
 
+# Install Python Items
+RUN pip install awscli
+
 # Install NPM Items
 RUN npm install -g bower ember-cli grunt-cli less
 
