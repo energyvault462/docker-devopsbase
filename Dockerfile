@@ -31,11 +31,8 @@ RUN yum -y install epel-release && \
 
 WORKDIR /tmp
 
-# Install Packer
-RUN wget https://releases.hashicorp.com/packer/0.10.1/packer_0.10.1_linux_amd64.zip -O packer.zip && \
-    unzip packer.zip && \
-    rm packer.zip && \
-    mv packer* /usr/local/bin/
+# Upgrade Pip
+RUN pip install --upgrade pip
 
 # Install RVM
 RUN gpg --keyserver hkp://keys.gnupg.net --recv-keys D39DC0E3 && \
@@ -46,18 +43,14 @@ RUN gpg --keyserver hkp://keys.gnupg.net --recv-keys D39DC0E3 && \
     cd /tmp && \
     rm -rf 1.27.0.tar.gz rvm-1.27.0
 
+# Install Packer
+RUN wget https://releases.hashicorp.com/packer/0.10.1/packer_0.10.1_linux_amd64.zip -O packer.zip && \
+    unzip packer.zip && \
+    rm packer.zip && \
+    mv packer* /usr/local/bin/
 
-# Install Grunt
-RUN npm install -g grunt-cli
-
-# Install Ember
-RUN npm install -g ember-cli
-
-# Install Bower
-RUN npm install -g bower
-
-# Install Less
-RUN npm install -g less
+# Install NPM Items
+RUN npm install -g bower ember-cli grunt-cli less
 
 # Add custom binaries
 ADD ext/cqlsh /usr/bin/cqlsh
