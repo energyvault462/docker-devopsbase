@@ -47,17 +47,8 @@ RUN gpg --keyserver hkp://keys.gnupg.net --recv-keys D39DC0E3 && \
     rm -rf 1.27.0.tar.gz rvm-1.27.0
 
 
-# Install Grunt
-RUN npm install -g grunt-cli
-
-# Install Ember
-RUN npm install -g ember-cli
-
-# Install Bower
-RUN npm install -g bower
-
-# Install Less
-RUN npm install -g less
+# Install NPM Items
+RUN npm install -g bower ember-cli grunt-cli less
 
 # Add custom binaries
 ADD ext/cqlsh /usr/bin/cqlsh
