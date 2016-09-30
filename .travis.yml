@@ -1,4 +1,8 @@
-script:
-   - docker build -t devopsbase .
 services:
-   - docker
+  - docker
+
+before_script:
+  - ./.travis/setup_env.sh
+
+script:
+  - ./.travis/docker_build.sh
