@@ -2,6 +2,17 @@ FROM dan9186/golang:centos7
 
 MAINTAINER Daniel Hess <dan9186@gmail.com>
 
+ARG BUILD_DATE
+ARG BUILD_NUMBER
+ARG VERSION
+
+LABEL org.metadata.build-date=$BUILD_DATE \
+	   org.metadata.version=$VERSION.$BUILD_NUMBER \
+	   org.metadata.name="" \
+	   org.metadata.description="" \
+	   org.metadata.url="https://github.com/dan9186/docker-devopsbase" \
+	   org.metadata.vcs-url="https://github.com/dan9186/docker-devopsbase"
+
 # Add repos
 RUN rpm -Uvh https://download.postgresql.org/pub/repos/yum/9.5/redhat/rhel-7-x86_64/pgdg-centos95-9.5-2.noarch.rpm
 
@@ -41,7 +52,8 @@ RUN gpg --keyserver hkp://keys.gnupg.net --recv-keys D39DC0E3 && \
     cd rvm-1.27.0 && \
     ./install && \
     cd /tmp && \
-    rm -rf 1.27.0.tar.gz rvm-1.27.0
+    rm -rf 1.27.0.tar.gz rvm-1.27.0 && \
+    echo "bundler" >> /usr/local/rvm/gemsets/global.gem
 
 # Install Packer
 RUN wget https://releases.hashicorp.com/packer/0.10.1/packer_0.10.1_linux_amd64.zip -O packer.zip && \
