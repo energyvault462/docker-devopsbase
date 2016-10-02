@@ -7,7 +7,9 @@ if [ "$DEBUG" == "true" ]; then
 fi
 
 if [[ "$GIT_CHANGES" == *"Dockerfile"* || "$DEBUG" == "true" ]]; then
-	echo "Dockerfile changes detected, testing docker build"
+	echo "Dockerfile changes detected"
+
+	echo "Testing Dockerfile"
 	docker build \
 		--build-arg BUILD_DATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` \
 		--build-arg BUILD_NUMBER=$TRAVIS_BUILD_NUMBER \
