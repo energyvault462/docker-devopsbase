@@ -2,7 +2,11 @@
 
 source .env
 
-if [[ "$GIT_CHANGES" == *"Dockerfile"* ]]; then
+if [ "$DEBUG" == "true" ]; then
+	echo "Debug enabled"
+fi
+
+if [[ "$GIT_CHANGES" == *"Dockerfile"* || "$DEBUG" == "true" ]]; then
 	echo "Dockerfile changes detected, testing docker build"
 	docker build \
 		--build-arg BUILD_DATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` \
