@@ -26,7 +26,7 @@ RUN yum -y install epel-release && \
 					cmake curl \
 					jq \
 					libcurl-devel libffi-devel libpqxx-devel libtool libxml2-devel libxslt-devel libyaml-devel libtool-ltdl-devel \
-					git \
+					gcc-c++ git \
 					make man maven mercurial \
 					nmap nmap-ncat nodejs npm net-tools \
 					patch postgresql95-devel postgresql-devel python-devel python-pip \
