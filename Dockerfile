@@ -53,7 +53,7 @@ RUN gpg --keyserver hkp://keys.gnupg.net --recv-keys D39DC0E3 && \
     ./install && \
     cd /tmp && \
     rm -rf 1.27.0.tar.gz rvm-1.27.0 && \
-    echo "bundler" >> /usr/local/rvm/gemsets/global.gem
+    echo "bundler" >> /usr/local/rvm/gemsets/global.gems
 
 # Install Packer
 RUN wget https://releases.hashicorp.com/packer/0.10.1/packer_0.10.1_linux_amd64.zip -O packer.zip && \
