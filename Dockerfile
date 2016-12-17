@@ -25,7 +25,7 @@ RUN yum -y install epel-release && \
 					bind-utils bison bzip2 bzr \
 					cmake curl \
 					jq \
-					libcurl-devel libffi-devel libpqxx-devel libtool libxml2-devel libxslt-devel libyaml-devel libtool-ltdl-devel \
+					libcurl-devel libffi-devel libicu-devel libpqxx-devel libtool libxml2-devel libxslt-devel libyaml-devel libtool-ltdl-devel \
 					gcc-c++ git \
 					make man maven mercurial \
 					nmap nmap-ncat nodejs npm net-tools \
