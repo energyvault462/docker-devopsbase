@@ -25,6 +25,11 @@ if [[ "$GIT_CHANGES" == *"Dockerfile"* || "$DEBUG" == "true" ]]; then
 		--build-arg BUILD_NUMBER=$TRAVIS_BUILD_NUMBER \
 		--build-arg VERSION="0.0.1" \
 		.
+
+	if [ "$TRAVIS_BRANCH" == "master" ]; then
+		echo "Pushing image $IMAGE_NAME"
+		docker push $IMAGE_NAME
+	fi
 else
 	echo "No Dockerfile changes, skipping docker build"
 fi
