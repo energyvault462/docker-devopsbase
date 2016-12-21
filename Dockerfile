@@ -24,6 +24,7 @@ RUN yum -y install epel-release && \
 					ack autoconf automake \
 					bind-utils bison bzip2 bzr \
 					cmake curl \
+					file-devel \
 					jq \
 					libcurl-devel libffi-devel libicu-devel libpqxx-devel libtool libxml2-devel libxslt-devel libyaml-devel libtool-ltdl-devel \
 					gcc-c++ git \
