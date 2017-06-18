@@ -1,6 +1,6 @@
 FROM gomicro/golang:centos7
 
-MAINTAINER Daniel Hess <dan9186@gmail.com>
+MAINTAINER Brent Johnson <brentj433@gmail.com>
 
 ARG BUILD_DATE
 ARG BUILD_NUMBER
