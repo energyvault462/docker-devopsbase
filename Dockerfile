@@ -1,6 +1,6 @@
 FROM gomicro/golang:centos7
 
-MAINTAINER Daniel Hess <dan9186@gmail.com>
+MAINTAINER Brent Johnson <brentj433@gmail.com>
 
 ARG BUILD_DATE
 ARG BUILD_NUMBER
@@ -10,8 +10,8 @@ LABEL org.metadata.build-date=$BUILD_DATE \
 	   org.metadata.version=$VERSION.$BUILD_NUMBER \
 	   org.metadata.name="" \
 	   org.metadata.description="" \
-	   org.metadata.url="https://github.com/dan9186/docker-devopsbase" \
-	   org.metadata.vcs-url="https://github.com/dan9186/docker-devopsbase"
+	   org.metadata.url="https://github.com/energyvault462/docker-devopsbase" \
+	   org.metadata.vcs-url="https://github.com/energyvault462/docker-devopsbase"
 
 # Add repos
 RUN rpm -Uvh https://download.postgresql.org/pub/repos/yum/9.5/redhat/rhel-7-x86_64/pgdg-centos95-9.5-2.noarch.rpm
