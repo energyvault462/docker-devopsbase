@@ -14,7 +14,7 @@ LABEL org.metadata.build-date=$BUILD_DATE \
 	   org.metadata.vcs-url="https://github.com/energyvault462/docker-devopsbase"
 
 # Add repos
-RUN rpm -Uvh https://download.postgresql.org/pub/repos/yum/9.5/redhat/rhel-7-x86_64/pgdg-centos95-9.5-2.noarch.rpm
+#RUN rpm -Uvh https://download.postgresql.org/pub/repos/yum/9.5/redhat/rhel-7-x86_64/pgdg-centos95-9.5-2.noarch.rpm
 
 # Install Packages
 RUN yum -y install epel-release && \
